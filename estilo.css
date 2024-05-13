@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "Fira-Sans";
+  src: url("Fira_Sans/FiraSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Andika";
+  src: url("Andika/Andika-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Actor";
+  src: url("Actor/Actor-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6599d4;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 90px 20px 0;
+}
+
+h1 {
+  font-family: "Fira-Sans";
+  font-size: 60px;
+  color: #f8f6f8;
+}
+
+h2 {
+  font-family: "Andika";
+  color: #f8f6f8;
+}
+
+h3 {
+  font-family: "Fira-Sans";
+}
+
+.header {
+  background-color: #1a3b86;
+  height: 73px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.navml {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nmi {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nml {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.nml:hover {
+  background-color: bisque;
+  transition: 1;
+}
+
+.toggle {
+  background-color: #1a3b86;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #6599d4;
+  
+ 
+  
+}
+
+.form-content {
+  width: 100%;
+  max-width: 400px;
+  background-color: #78b5c7;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.form-content h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  position: relative;
+}
+
+.form-content h1::after{
+  content: '';
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #045abd;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input-field{
+  background-color: #80d0e9;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+
+input{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 18px 15px;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+.input-field i {
+  margin-left: 15px;
+  color: #0420bd;
+}
+
+form p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 13px;
+}
+
+form p a {
+  color: #1d11ce;
+  margin-left: 5px;
+}
+
+.btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-field button {
+  flex-basis: 48%;
+  font-size: 16px;
+  background-color: #2427ca;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+
+.btn-field button.disable {
+  background-color: #3199d4;
+  color: #2c2f35;
+}
+.btn-submit{
+  background-color: #3199d4;
+  cursor: pointer;
+  flex-basis: 48%;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #647da9;
+    padding-top: 70px;
+  }
+
+  .header {
+    height: 73px;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #1a3b86;
+    position: fixed;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100%-60px);
+    overflow: auto;
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nmi {
+    line-height: 75px;
+  }
+
+  .nml:hover,
+  .nav-menu-linka {
+    background: none;
+    color: deepskyblue;
+  }
+
+  .toggle {
+    background-color: #647da9;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+  }
+  .nav-menvi {
+    left: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
